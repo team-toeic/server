@@ -10,7 +10,7 @@ env:
   PROJECT_NAME: come-on-toeic
   BUCKET_NAME: come-on-toeic-cicd-bucket
   CODE_DEPLOY_APP_NAME: come-on-toeic
-  DEPLOYMENT_GROUP_NAME: come-on-toeic
+  DEPLOYMENT_GROUP_NAME: come-on-toeic-instance
 
 jobs:
   deploy:

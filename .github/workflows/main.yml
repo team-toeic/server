@@ -18,11 +18,11 @@ jobs:
           java-version: 17
 
       - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
+        run: chmod +x ./come-on-toeic/gradlew
         shell: bash
 
       - name: Build and Test
-        run: ./gradlew build test
+        run: ./come-on-toeic/gradlew build test
   
       - name: Make Zip File
         run: zip -qq -r ./$GITHUB_SHA.zip .

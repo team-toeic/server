@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/come-on-toeic
+    url: jdbc:mysql://15.164.154.72:3306/come-on-toeic?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver

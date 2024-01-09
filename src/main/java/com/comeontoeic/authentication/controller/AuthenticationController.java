@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.*;
 public class AuthenticationController {
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody SignUpRequest signUpRequest) {
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(signUpRequest, HttpStatus.OK);
     }
 }

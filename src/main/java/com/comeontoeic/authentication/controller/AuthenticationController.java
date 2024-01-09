@@ -1,14 +1,14 @@
 package com.comeontoeic.authentication.controller;
 
+import com.comeontoeic.authentication.dto.request.SignUpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class AuthenticationController {
-    @GetMapping("/register")
-    public ResponseEntity<?> register() {
+    @PostMapping("/register")
+    public ResponseEntity<?> register(@RequestBody SignUpRequest signUpRequest) {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -1,5 +1,7 @@
 package com.comeontoeic.common.jwt;
 
+import com.comeontoeic.authentication.domain.MemberRole;
+import com.comeontoeic.authentication.dto.CustomUserDetails;
 import com.comeontoeic.authentication.repository.MemberRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

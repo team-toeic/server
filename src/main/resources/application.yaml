@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://15.164.154.72:3306/come-on-toeic?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://come-on-toeic.cv6sugwm4m8j.ap-northeast-2.rds.amazonaws.com:3306/come-on-toeic?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: root
-    password: 1234
+    password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 jwt:

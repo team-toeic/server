@@ -6,9 +6,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/users/*")
 public class AuthenticationController {
-    @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody SignUpRequest signUpRequest) {
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody SignUpRequest signUpRequest) {
+        return new ResponseEntity<>(signUpRequest, HttpStatus.OK);
+    }
+
+    @PostMapping("/signup")
+    public ResponseEntity<?> signup(@RequestBody SignUpRequest signUpRequest) {
         return new ResponseEntity<>(signUpRequest, HttpStatus.OK);
     }
 }

@@ -1,16 +1,20 @@
 package com.comeontoeic.authentication.dto.request;
 
+import com.comeontoeic.authentication.domain.Member;
 import com.comeontoeic.authentication.domain.MemberRole;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 
+import java.util.List;
+
 @Getter
 @Setter
-public class SignUpRequest {
+public class SignupRequest {
     @Email(message = "이메일 형식에 맞지 않습니다.")
     @Length
     private String username;
@@ -22,5 +26,12 @@ public class SignUpRequest {
     @NotBlank
     String passwordConfirm;
 
+    @NotNull
+    List<Boolean> termsOfServices;
+
     MemberRole memberRole = MemberRole.ROLE_USER;
+
+    public Member toEntity(String encodedPassword) {
+        return new Member(username, encodedPassword);
+    }
 }

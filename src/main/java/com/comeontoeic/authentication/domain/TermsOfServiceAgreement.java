@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Entity
 @Getter
-@IdClass(TermsOfServiceAgreementId.class)
+@IdClass(TermsOfServiceAgreementPK.class)
 public class TermsOfServiceAgreement {
     @Id
     @ManyToOne(targetEntity = Member.class)

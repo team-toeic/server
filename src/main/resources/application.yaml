@@ -4,7 +4,38 @@ spring:
     username: root
     password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
 
+    # script 파일이 hibernate 초기화 이후 동작하게 하기 위한 옵션
+    defer-datasource-initialization: true
+
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+
+    # 내장(hibernate) 외장(jpa) db에 sql script 를 모두 동작
+  sql:
+    init:
+      mode: never
+
+    # json response 에 non_null value 만 반환
+  jackson:
+    default-property-inclusion: non_null
+    property-naming-strategy: SNAKE_CASE
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
 jwt:
   secret:
     key: x!A%D*G-KaPdSgVkYp3s5v8y/B?E(H+M
